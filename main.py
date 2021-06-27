@@ -22,7 +22,7 @@ def get_news(publication='bbc'):
     return ''' 
         <html>
         <body>
-            <h1> Headlines </h1>
+            <h1> More Headlines </h1>
             <b>{0}</b></br>
             <i>{1}</i></br>
             <p>{2}</p></br>
