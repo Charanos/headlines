@@ -23,7 +23,7 @@ def get_news():
         publication = query.lower()
 
     feed = feedparser.parse(rss_feeds[publication])
-    return render_template('index.html', articles=feed['entries'])
+    return render_template('index.html', rss_feeds=rss_feeds, articles=feed['entries'])
 
 
 if __name__ == '__main__':

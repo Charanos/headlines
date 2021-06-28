@@ -17,11 +17,15 @@
     </h1>
 
     <h3 class="sub-sub-heading">
-        search news feeds
+        select news feeds
     </h3>
 
     <form action="" class="news_feeds">
-        <input type="text" name="publication" class="text-field">
+        <select name="publication" id="rss_feeds">
+            {% for feed in rss_feeds %}
+                <option value="{{ feed }}">{{ feed }} </option>
+            {% endfor %}
+        </select>
         <input type="submit" value="submit" class="sub-btn">
     </form>
 
