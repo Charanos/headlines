@@ -1,5 +1,8 @@
 import os
+import json
 import feedparser
+import urllib.parse
+import urllib.request
 from flask import Flask, render_template, session, request
 
 
@@ -14,6 +17,22 @@ rss_feeds = {
 }
 
 
+def get_weather(query):
+    api_url = "http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=fea3eec3aef8e1bac0473be01228c0a6"
+    query = urllib.parse.quote(query)
+    url = api_url.format(query)
+    data = urllib.request.urlopen(url).read()
+    parsed = json.loads(data)
+    weather = None
+    if parsed.get('weather'):
+        weather = {
+            "city": parsed["name"],
+            "temparature": parsed["main"]["temp"],
+            "description": parsed["weather"][0]["description"]
+        }
+    return weather
+
+
 @app.route('/')
 def get_news():
     query = request.args.get('publication')
@@ -23,7 +42,8 @@ def get_news():
         publication = query.lower()
 
     feed = feedparser.parse(rss_feeds[publication])
-    return render_template('index.html', rss_feeds=rss_feeds, articles=feed['entries'])
+    weather = get_weather("Machakos, KE")
+    return render_template('index.html', weather=weather, rss_feeds=rss_feeds, articles=feed['entries'])
 
 
 if __name__ == '__main__':

@@ -12,6 +12,19 @@
         <h1 class="heading">Headlines</h1>
     </header>
 
+    <h2 class="sub-heading">
+        current weather
+    </h2>
+    <p class="lead">
+        | City: | <b> {{ weather.city }} </b> 
+    </p>
+    <p class="lead"> 
+        | Weather Decription: | <b>{{ weather.description }} </b>
+     </p>
+    <p class="lead"> 
+        | Temparature: | <b> {{ weather.temparature }} &#8451; </b>
+     </p>
+
     <h1 class="sub-heading">
         news articles
     </h1>
@@ -19,7 +32,6 @@
     <h3 class="sub-sub-heading">
         select news feeds
     </h3>
-
     <form action="" class="news_feeds">
         <select name="publication" id="rss_feeds">
             {% for feed in rss_feeds %}
