@@ -15,8 +15,13 @@ rss_feeds = {
 
 
 @app.route('/')
-@app.route('/<publication>')
-def get_news(publication='bbc'):
+def get_news():
+    query = request.args.get('publication')
+    if not query or query.lower() not in rss_feeds:
+        publication = 'bbc'
+    else:
+        publication = query.lower()
+
     feed = feedparser.parse(rss_feeds[publication])
     return render_template('index.html', articles=feed['entries'])
 
