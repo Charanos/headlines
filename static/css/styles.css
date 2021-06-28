@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #222;
+  line-height: 1.6;
+  box-sizing: border-box;
+  letter-spacing: 0.01rem;
+  transition: all ease 250ms;
+  text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  position: relative;
+  background: url("../antonio-janeski-I4TUNyn55oE-unsplash.jpg") center center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: rgba(5, 5, 5, 0.329);
+}
+
+header {
+  height: 8em;
+  width: 100%;
+  display: flex;
+  margin: 0 0 5rem;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8b9;
+}
+
+header .heading {
+  padding: 1rem 0;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* upper cards  */
+
+.small_cards {
+  gap: 2em;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.small_card {
+  margin: 3rem 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(238, 238, 238, 0.459);
+  border-radius: 12px;
+  backdrop-filter: blur(40px);
+  background-clip: padding-box;
+  background-blend-mode: multiply;
+  box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.055);
+}
+.small_card > .sub-heading {
+  margin: 1.5rem 0;
+  font-size: 1.83rem;
+}
+.small_card > .lead {
+  font-size: 1.123rem;
+  margin: 1.5rem 0.5rem;
+}
+
+/* form fields  */
+form {
+  font-family: "Montserrat", sans-serif;
+}
+.forex_field {
+  width: 4rem;
+  height: 2rem;
+  padding: 0.4rem;
+  font-size: 1.0123rem;
+  background: #e4e4e4;
+  box-shadow: 2px 3px 5px rgba(85, 85, 85, 0.116);
+}
+.text_field {
+  width: 45%;
+  height: 2rem;
+  outline: none;
+  padding: 0.6rem;
+  font-size: 1.123rem;
+  background: #f3f3f3de;
+}
+.sub-btn {
+  width: auto;
+  font-weight: 500;
+  border-radius: 5px;
+  background: rgba(238, 238, 238, 0.89);
+  font-size: 1.123rem;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  margin: 1.5rem 0.5rem;
+}
+.sub-btn:hover {
+  transform: scale(1.012);
+  background: rgba(252, 252, 252, 0.719);
+}
+
+/* hero section  */
+.hero {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  margin: 5rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: url("../luca-micheli-ruWkmt3nU58-unsplash.jpg") center center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: rgba(5, 5, 5, 0.329);
+}
+
+.hero > .sub-heading {
+  font-size: 4rem;
+  color: #e4e4e4;
+}
+.hero > .sub-sub-heading {
+  font-size: 2.5rem;
+  color: #e4e4e4c0;
+}
+#rss_feeds {
+  width: 8rem;
+  height: 2.8rem;
+  outline: none;
+  padding: 0.6rem;
+  border-radius: 15px;
+  font-size: 1.123rem;
+  background: #f3f3f3de;
+}
+
+.articles {
+  gap: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.article {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.658);
+  backdrop-filter: blur(400px);
+  background-clip: padding-box;
+  background-blend-mode: multiply;
+  box-shadow: 5px 5px 5px rgba(22, 76, 90, 0.164);
+}
+.article:hover {
+  transform: scale(1.015);
+  background-color: rgba(255, 255, 255, 0.774);
+  box-shadow: 5px 5px 5px rgba(22, 76, 90, 0.24);
+}
+
+.article > .title {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+.small_lead {
+  margin: 0.5rem 0;
+  font-size: 1.03rem;
+  color: rgba(51, 51, 51, 0.74);
+}
+.article > .lead {
+  margin: 1rem 0;
+  font-size: 1.23rem;
+  text-transform: initial;
+}
+.article > .link {
+  color: #180036;
+  font-size: 1.123rem;
+  margin: 1rem 0 2rem;
+}
